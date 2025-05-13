@@ -1,24 +1,19 @@
 // Projekt 3: PBM-Beispiel
 #include <Arduino.h>
-int d = 5;
+// Projekt 4 - Beispiel für digitale Eingänge
+#define LED 12 
+#define BUTTON 7
 void setup()
 {
-pinMode(3, OUTPUT); // Der LED-Steuerpin ist Nr. 3, er ist PBM-fähig
+ pinMode(LED, OUTPUT); // Ausgang für die LED 
+ pinMode(BUTTON, INPUT); // Eingang für die Taste
 }
-
-
-
 void loop()
 {
-for ( int a = 0 ; a < 256 ; a++ )
-{
-analogWrite(3, a);
-delay(d);
-}
-for ( int a = 255 ; a >= 0 ; a-- )
-{
-analogWrite(3, a);
-delay(d);
-}
-delay(200);
+ if ( digitalRead(BUTTON) == HIGH )
+ {
+ digitalWrite(LED, HIGH); // Schaltet die LED ein
+ delay(500); // Wartet 0,5 s
+ digitalWrite(LED, LOW); // Schaltet die LED aus
+ }
 }
