@@ -9,6 +9,7 @@ pinMode(3, OUTPUT); // Dito für LED 2 bis LED 5
 pinMode(4, OUTPUT);
 pinMode(5, OUTPUT);
 pinMode(6, OUTPUT);
+pinMode(7, OUTPUT)
 }
 
 void loop() {
@@ -20,6 +21,7 @@ delay(d);
 digitalWrite(a, LOW);
 delay(d);
 }
+//testGit
 // Die Schleife loop() kehrt an den Anfang zurück und
 // wird wiederholt ausgeführt
 }
