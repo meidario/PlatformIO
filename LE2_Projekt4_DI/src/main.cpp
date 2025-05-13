@@ -13,7 +13,7 @@ void loop()
  if ( digitalRead(BUTTON) == HIGH )
  {
  digitalWrite(LED, HIGH); // Schaltet die LED ein
- delay(500); // Wartet 0,5 s
+ delay(1000); // Wartet 0,5 s
  digitalWrite(LED, LOW); // Schaltet die LED aus
  }
 }
