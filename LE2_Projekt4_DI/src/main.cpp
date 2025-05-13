@@ -1,15 +1,15 @@
 #include <Arduino.h>
 
-// put function declarations here:
-int myFunction(int, int);
-
-void setup() {
-  // put your setup code here, to run once:
- pinMode(LED, INPUT); // Eingang für die Taste
+// Projekt 4 - Beispiel für digitale Eingänge
+#define LED 12 
+#define BUTTON 7
+void setup()
+{
+ pinMode(LED, OUTPUT); // Ausgang für die LED 
+ pinMode(BUTTON, INPUT); // Eingang für die Taste
 }
-
-void loop() {
-  // put your main code here, to run repeatedly:
+void loop()
+{
  if ( digitalRead(BUTTON) == HIGH )
  {
  digitalWrite(LED, HIGH); // Schaltet die LED ein
